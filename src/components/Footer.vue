@@ -13,7 +13,6 @@
           <span>Location</span>
           <v-icon>place</v-icon>
         </v-btn>
-  
         <v-btn dark href="/about">
           <span>About</span>
           <v-icon>favorite</v-icon>
@@ -24,14 +23,14 @@
   </v-app>
 </template>
 <script>
-export default {
- computed: {
-    bottomNav () {
-      switch (this.$route.path) {
-        case '/': return 0
-        case '/about': return 1
+  export default {
+  methods: {
+      bottomNav () {
+        switch (this.$route.path) {
+          case '/': return 0
+          case '/about': return 1
+        }
       }
     }
   }
-}
 </script>

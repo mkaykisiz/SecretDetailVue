@@ -1,6 +1,6 @@
 <template>
     <div id="search">
-      <v-app id="inspire">
+      <v-app id="searchApp" class="searchApp">
         <v-form>
           <v-container>
             <v-layout row wrap>
@@ -22,7 +22,6 @@
             </v-layout>
           </v-container>
         </v-form>
-
           <google-map
             :center="center"
             :zoom="18"
@@ -38,7 +37,6 @@
               @dragend="selectLocation"
             />
           </google-map>
-
       </v-app>
     </div>
 </template>
@@ -48,9 +46,12 @@
     height: 500px !important;
     position: relative;
   }
+  .searchApp > .application--wrap{
+    min-height: auto;
+  }
 </style>
 <script>
-const services = require('../services/googleapis');
+const services = require('../services/googleapis')
 export default {
   data () {
     return {
@@ -72,10 +73,10 @@ export default {
     }
   },
   methods: {
-    search (){
-      if (this.fullAddress==="Move to location"){
-        alert("Move to location please")
-      }else{
+    search () {
+      if (this.fullAddress === 'Move to location') {
+        alert('Move to location please')
+      } else {
         alert(this.fullAddress)
       }
     },

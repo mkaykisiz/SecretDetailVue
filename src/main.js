@@ -7,7 +7,6 @@ import './registerServiceWorker'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import Vuetify from 'vuetify'
 
-
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
